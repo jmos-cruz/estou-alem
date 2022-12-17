@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lemon', cursive;
+
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('variaçoes_2.png');
+    background-position: center;
+    background-size: cover;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+
+
+.navbar{
+    height: 20%;
+    display: flex;
+    align-items: center;
+
+}
+
+.logo{
+    width: 7%;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.menu-icon{
+    width: 2%;
+    cursor: pointer;
+    margin-left: 80px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav ul li a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    text-shadow: 2px 2px #000;
+}
+
+nav ul li a1{
+    color: #fff;
+    font-size: 16px;
+    font-style: inherit;
+    text-shadow: 2px 2px #000;    
+}
+
+nav ul li a1:hover{
+    text-decoration: underline 3px rgb(0, 153, 170, 1) ;
+    color: #fff;
+    font-size: 16px;
+    font-style: inherit;
+    
+}
+
+nav ul li a3{
+    text-decoration: underline 3px rgb(0, 153, 170, 1);
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    bottom: 2px;
+    font-style: inherit;
+    text-shadow: 2px 2px #000;    
+}
+
+
+
+.row{
+    display: flex;
+    height: 70%;
+    align-items: center;
+
+}
+
+.col{
+    flex-basis: 50%;
+}
+
+h1{
+    color: #fff;
+    font-size: 45px;
+    margin-bottom: 40px;
+    
+}
+
+h2{
+    color: #fff;
+    font-size: 35px;
+    
+}
+
+p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+
+.card{
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 20px;
+    margin-top: 30px;
+    vertical-align: top;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.title{
+    text-shadow: 4px 4px #000;
+}
+
+
+
+.card1{
+    background-image: url('aless.jpg');
+}
+
+
+.card1 .aless{
+    visibility: hidden;
+}
+.card2 .diogo{
+    visibility: hidden;
+}
+.card3 .joao-cruz{
+    visibility: hidden;
+}
+.card4 .joao-ferr{
+    visibility: hidden;
+}
+.card5 .miguel{
+    visibility: hidden;
+}
+.card6 .pedro{
+    visibility: hidden;
+}
+.card2{
+    background-image: url('diogo.jpg');
+}
+.card3{
+    background-image: url('cruz.jpg');
+}
+.card4{
+    background-image: url('ferr.jpg');
+}
+.card5{
+    background-image: url('miguel.jpg');
+}
+.card6{
+    background-image: url('pedro.jpg');
+}
+
+.card1:hover .aless{
+    visibility: visible;
+    
+}
+.card1:hover{
+    transform:scale(1.04);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('aless.jpg');
+}
+
+
+.card2:hover .diogo{
+    visibility: visible;
+    
+}
+.card2:hover{
+    transform:scale(1.04);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('diogo.jpg');
+}
+
+
+.card3:hover .joao-cruz{
+    visibility: visible;
+    
+}
+.card3:hover{
+    transform:scale(1.04);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('cruz.jpg');
+}
+
+
+.card4:hover .joao-ferr{
+    visibility: visible;
+    
+}
+.card4:hover{
+    transform:scale(1.04);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('ferr.jpg');
+}
+
+
+.card5:hover .miguel{
+    visibility: visible;
+    
+}
+.card5:hover{
+    transform:scale(1.04);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('miguel.jpg');
+}
+
+
+.card6:hover .pedro{
+    visibility: visible;
+    
+}
+.card6:hover{
+    transform:scale(1.04);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('pedro.jpg');
+}
