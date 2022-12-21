@@ -20,7 +20,7 @@ const bar = [
         
         destination : disco[Math.floor(Math.random() * disco.length)],
         
-        img: 'bar.png'
+        img: 'Img/bar.png'
             
         },
 
@@ -29,7 +29,7 @@ const bar = [
         
         destination : bar[Math.floor(Math.random() * bar.length)] ,
         
-        img: 'disco.png'
+        img: 'Img/disco.png'
         
     }];
 

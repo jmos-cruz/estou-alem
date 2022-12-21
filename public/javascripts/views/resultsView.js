@@ -15,11 +15,11 @@ let renderPage = (resultsArr) => {
         </a>              
 
 
-        <a id="tripadvisor" href="https://www.tripadvisor.pt/" target="_blank">
+        <div id="tripadvisor">
             <div class="card card2"  rel="noreferrer noopener"></div>
         </a>
                     
-        <a id="hotels" href="https://www.booking.com/index.pt.html?aid=376389;label=Hoteis-dHPE1sykMRe*x3Pll8k6awS267724756065:pl:ta:p1:p22.563.000:ac:ap:neg:fi:tikwd-65526620:lp1011742:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YfNeh-lbHkPZfvshG1kRNbU;ws=&gclid=Cj0KCQiAqOucBhDrARIsAPCQL1ZxNvIQ7sVjOJZpstTTEdFR5v72lQdpJ_sV3TnWPtWy9y4AUpCpaikaAjWEEALw_wcB" target="_blank">
+        <div id="hotels">
             <div class="card card3" rel="noreferrer noopener"></div> 
         </a>
         </div>`;
@@ -38,7 +38,7 @@ let renderPage = (resultsArr) => {
         let trip = document.getElementById('tripadvisor');
         trip.innerHTML = 
         `<a id="tripadvisor" href="${resultsArr[1].link}" target="_blank">
-        <div class="card card2" rel="noreferrer noopener" style="background-image: url('../images/Tripadvisor-Emblem.png')"></div>
+            <div class="card card2" rel="noreferrer noopener" style="background-image: url('../images/Tripadvisor-Emblem.png')"></div>
         </a>`;
 
         let agency = document.getElementById('hotels');

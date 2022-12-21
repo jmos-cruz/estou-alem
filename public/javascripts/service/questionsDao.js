@@ -101,7 +101,7 @@ const partyQuestions = [
         answers: {
             a: {answer: '18-25', img: '/Img/18-25.png'},
             b: {answer: '26-35', img: '/Img/26-35.png'},
-            c: {answer: '35+', img: '/Img/35+.png'},
+            c: {answer: '35+', img: '/Img/35plus.png'},
             d: {answer: 'Old enough to PARTY!!', img: '/Img/OldParty.png'}
         },
     },
