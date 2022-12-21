@@ -13,4 +13,4 @@ Team:
   - @Escarpiado92
 
 Website
-https://estou-alem.up.railway.app/index
+https://estou-alem.up.railway.app/
