@@ -20,109 +20,105 @@ const femBiFri = [{link1:'https://www.ashleymadison.com/pt-pt/?gclid=Cj0KCQiAqOu
 
 const sexQuestions = [
     {
-      arr: ['a', 'a', 'a'],
-        destination: maleHetSer[Math.floor(Math.random() * maleHetSer.length)]
-        },
-  
-    {
-      arr: ['a', 'a', 'b'],
-        destination: maleHetOne[Math.floor(Math.random() * maleHetOne.length)]
+        arr: ['a', 'a', 'a'],
+        destination: maleHetSer
     },
   
     {
-      arr: ['a', 'a', 'c'],
-        destination: maleHetFri[Math.floor(Math.random() * maleHetFri.length)],
+        arr: ['a', 'a', 'b'],
+        destination: maleHetOne
+    },
+  
+    {
+        arr: ['a', 'a', 'c'],
+        destination: maleHetFri
     },
 
     {
         arr: ['a', 'a', 'd'],
-        destination: maleHetFri[Math.floor(Math.random() * maleBiFri.length)],
+        destination: maleHetFri
     },
   
     {
-      arr: ['a', 'b', 'a'],
-        destination: maleHomSer[Math.floor(Math.random() * maleHomSer.length)],
+        arr: ['a', 'b', 'a'],
+        destination: maleHomSer
     },
   
     {
-      arr: ['a', 'b', 'b'],
-        destination: maleHomOne[Math.floor(Math.random() * maleHomOne.length)],
+        arr: ['a', 'b', 'b'],
+        destination: maleHomOne
     },
   
     {
-      arr: ['a', 'b', 'c'],
-        destination: maleHomFri[Math.floor(Math.random() * maleHomFri.length)],
+        arr: ['a', 'b', 'c'],
+        destination: maleHomFri
     },
   
     {
-      arr: ['a', 'c', 'a'],
-        destination: maleBiSer[Math.floor(Math.random() * maleBiSer.length)],
+        arr: ['a', 'c', 'a'],
+        destination: maleBiSer
     },
   
     {
-      arr: ['a', 'c', 'b'],
-        destination: maleBiOne[Math.floor(Math.random() * maleBiOne.length)],
+        arr: ['a', 'c', 'b'],
+        destination: maleBiOne
     },
   
     {
-      arr: ['a', 'c', 'c'],
-        destination: maleBiFri[Math.floor(Math.random() * maleBiFri.length)],
+        arr: ['a', 'c', 'c'],
+        destination: maleBiFri
     },
   
     {
-      arr: ['b', 'a', 'a'],
-        destination: femHetSer[Math.floor(Math.random() * femHetSer.length)],
+        arr: ['b', 'a', 'a'],
+        destination: femHetSer
     },
   
     {
-      arr: ['b', 'a', 'b'],
-        destination: femHetOne[Math.floor(Math.random() * femHetOne.length)],
+        arr: ['b', 'a', 'b'],
+        destination: femHetOne
     },
   
     {
-      arr: ['b', 'a', 'c'],
-        destination: femHetFri[Math.floor(Math.random() * femHetFri.length)],
+        arr: ['b', 'a', 'c'],
+        destination: femHetFri
     },
   
     {
-      arr: ['b', 'b', 'a'],
-        destination: femHomSer[Math.floor(Math.random() * femHomSer.length)],
+        arr: ['b', 'b', 'a'],
+        destination: femHomSer
     },
   
     {
-      arr: ['b', 'b', 'b'],
-        destination: femHomOne[Math.floor(Math.random() * femHomOne.length)],
+        arr: ['b', 'b', 'b'],
+        destination: femHomOne
     },
   
     {
-      arr: ['b', 'b', 'c'],
-        destination: femHomFri[Math.floor(Math.random() * femHomFri.length)],
+        arr: ['b', 'b', 'c'],
+        destination: femHomFri
     },
   
     {
-      arr: ['b', 'c', 'a'],
-        destination: femBiSer[Math.floor(Math.random() * femBiSer.length)],
+        arr: ['b', 'c', 'a'],
+        destination: femBiSer
     },
   
     {
-      arr: ['b', 'c', 'b'],
-        destination: femBiOne[Math.floor(Math.random() * femBiOne.length)],
+        arr: ['b', 'c', 'b'],
+        destination: femBiOne
     },
   
     {
-      arr: ['b', 'c', 'c'],
-        destination: femBiFri[Math.floor(Math.random() * femBiFri.length)],
+        arr: ['b', 'c', 'c'],
+        destination: femBiFri
     },
   ];
   
   let filterResult = (questArr) => {
-    console.log(questArr);
-    for (let i = 0; i < sexQuestions.length; i++) {
-      if (sexQuestions[i].arr.toString() === questArr.toString()) {
-        console.log(sexQuestions[i]);
-        return {link: Object.values(sexQuestions[i].destination)[0], image:"/Img/sexual.png"};
-      }
-    }
+    let result = sexQuestions.filter(options => options.arr.toString() === questArr.toString())[0].destination;
+    console.log(result);
+    return { link: Object.values(result[Math.floor(Math.random()*result.length)]), image:"/Img/sexual.png" }
   };
 
   export { filterResult };

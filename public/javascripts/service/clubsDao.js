@@ -6,7 +6,7 @@ const bar = [
     {link5 : 'https://www.tripadvisor.com/Attraction_Review-g189158-d195865-Reviews-Kremlin-Lisbon_Lisbon_District_Central_Portugal.html'}
 ]
     
-    const disco = [
+const disco = [
     {link1 : 'https://www.cntraveler.com/bars/lisbon/park'}, 
     {link2 : 'https://www.cntraveler.com/bars/lisbon/cinco-lounge'}, 
     {link3 : 'https://www.cntraveler.com/bars/lisbon/foxtrot'}, 
@@ -14,31 +14,23 @@ const bar = [
     {link5 : 'https://www.cntraveler.com/bars/lisbon/red-frog'}
 ]
     
-    const resultsList = [
-        {
+const resultsList = [
+    {
         arr: ['a'],
-        
-        destination : disco[Math.floor(Math.random() * disco.length)],
-        
-        img: 'Img/bar.png'
-            
-        },
+        destination : disco,
+        img: 'Img/disco.png'  
+    },
 
-        {
+    {
         arr: ['b'],
-        
-        destination : bar[Math.floor(Math.random() * bar.length)] ,
-        
-        img: 'Img/disco.png'
-        
-    }];
+        destination : bar,
+        img: 'Img/bar.png'
+    }
+];
 
-    let filterResult = (resultArr) =>{
+let filterResult = (resultArr) =>{
+    let result = resultsList.filter(result => result.arr.toString() === resultArr.toString())[0];
+    return { link: Object.values(result.destination[Math.floor(Math.random()*5)]), image: result.img };
+};
 
-        for(let i = 0; i<resultsList.length; i++){
-        if(resultsList[i].arr.toString() === resultArr.toString()){
-            return {link: Object.values(resultsList[i].destination)[0], image: resultsList[i].img};
-        }
-    }};
-
-    export { filterResult };
+export { filterResult };

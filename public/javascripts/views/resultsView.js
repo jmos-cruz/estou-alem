@@ -14,10 +14,10 @@ let renderPage = (resultsArr) => {
             <div class="card card1"></div>
         </a>              
 
-
         <div id="tripadvisor">
             <div class="card card2"  rel="noreferrer noopener"></div>
         </a>
+        </div>
                     
         <div id="hotels">
             <div class="card card3" rel="noreferrer noopener"></div> 
@@ -50,8 +50,14 @@ let renderPage = (resultsArr) => {
         document.getElementsByClassName('card3')[0].style
         .backgroundImage = results.link.includes("airbnb") ? "url('../images/Airbnb-Logo.png')" : "url('../images/Booking-Logo.png')";
     } else {
+        title.innerHTML = 
+        `<h3>Click the image!</h3>`;
         imageLink.setAttribute('href', results.link);
         imageLink.setAttribute('target', '_blank');
+        let tripadvisor = document.getElementById('tripadvisor');
+        let hotel = document.getElementById('hotels');
+        tripadvisor.remove();
+        hotel.remove();
     }
 
 }

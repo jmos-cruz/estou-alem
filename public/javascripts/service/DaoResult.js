@@ -111,113 +111,83 @@ const wildnessTripadvisor = [
 {location : 'Ontario', link : 'https://www.tripadvisor.pt/Tourism-g154979-Ontario-Vacations.html', image : '/Img/Ontario.png'}]
 
 const resultsList = [
+
     {
-    arr: ['a', 'a'],
-        //Poderá acabar por ser sempre o mesmo link, confirmar
-        destination : bigCitiesAirBnB[Math.floor(Math.random() * bigCitiesAirBnB.length)] 
-        
-        
-        
+        arr: ['a', 'a'],
+        destination : bigCitiesAirBnB  
     },
 
     {
-    arr: ['a', 'b'],
-    
-        destination : mountainsAirBnB[Math.floor(Math.random() * mountainsAirBnB.length)] 
-        
-    }
-    ,
+        arr: ['a', 'b'],
+        destination : mountainsAirBnB   
+    },
 
     {
-    arr: ['a', 'c'],
+        arr: ['a', 'c'],
+        destination : beachAirBnB        
+    },
     
-        destination : beachAirBnB[Math.floor(Math.random() * beachAirBnB.length)] 
-            
-    }
-    ,
     {
-    arr: ['a', 'd'],
+        arr: ['a', 'd'],
+        destination : wildnessAirBnB       
+    },
     
-        destination : wildnessAirBnB[Math.floor(Math.random() * wildnessAirBnB.length)] 
-            
-    }
-    ,
     {
-    arr: ['b', 'a'],
-        
-        destination : bigCitiesHostel[Math.floor(Math.random() * bigCitiesHostel.length)] 
-            
-    }
-    ,
-    {
-    arr: ['b', 'b'],
-        
-        destination : mountainsHostel[Math.floor(Math.random() * mountainsHostel.length)] 
-            
-    }
-    ,
-    {
-    arr: ['b', 'c'],
+        arr: ['b', 'a'],
+        destination : bigCitiesHostel        
+    },
     
-        destination : beachHostel[Math.floor(Math.random() * beachHostel.length)] 
-            
-    }
-    ,
     {
-    arr: ['b', 'd'],
+        arr: ['b', 'b'],
+        destination : mountainsHostel       
+    },
     
-        destination : wildnessHostel[Math.floor(Math.random() * wildnessHostel.length)] 
-            
-    }
-    ,
     {
-    arr: ['c', 'a'],
-        
-        destination : bigCitiesHotel[Math.floor(Math.random() * bigCitiesHotel.length)] 
-            
-    }
-    ,
-    {
-    arr: ['c', 'b'],
-        
-        destination : mountainsHotel[Math.floor(Math.random() * mountainsHotel.length)] 
-            
-    }
-    ,
-    {
-    arr: ['c', 'c'],
-        
-        destination : beachHotel[Math.floor(Math.random() * beachHotel.length)] 
-            
-    }
-    ,
-    {
-    arr: ["c", "d"],
+        arr: ['b', 'c'],
+        destination : beachHostel     
+    },
     
-        destination : wildnessHotel[Math.floor(Math.random() * wildnessHotel.length)] 
-            
+    {
+        arr: ['b', 'd'],
+        destination : wildnessHostel       
+    },
+    
+    {
+        arr: ['c', 'a'],
+        destination : bigCitiesHotel       
+    },
+    
+    {
+        arr: ['c', 'b'],
+        destination : mountainsHotel       
+    },
+    
+    {
+        arr: ['c', 'c'],
+        destination : beachHotel       
+    },
+    
+    {
+        arr: ["c", "d"],
+        destination : wildnessHotel        
     }
-    ];
+];
 
 let filterResult = (resultArr) => {
-    for(let i = 0; i < resultsList.length; i++){
-        if(resultsList[i].arr.toString() == resultArr.toString()){
-            let result = resultsList[i].destination;
-            
-            //Runs through all trip advisor arrays searching for the same destination
-            let cityTrip = bigCitiesTripadvisor.filter(destination => destination.location === result.location);
-            
-            let mountainTrip = mountainTripadvisor.filter(destination => destination.location === result.location);
-            
-            let beachTrip = beachTripadvisor.filter(destination => destination.location === result.location);
+    let result = resultsList.filter(option => option.arr.toString() === resultArr.toString())[0].destination[Math.floor(Math.random()*5)];
 
-            let wildnessTrip = wildnessTripadvisor.filter(destination => destination.location === result.location);
+    let cityTrip = bigCitiesTripadvisor.filter(destination => destination.location === result.location);
+            
+    let mountainTrip = mountainTripadvisor.filter(destination => destination.location === result.location);
+            
+    let beachTrip = beachTripadvisor.filter(destination => destination.location === result.location);
 
-            let tripAdvisorLink = [cityTrip, mountainTrip, beachTrip, wildnessTrip].flat()[0];
+    let wildnessTrip = wildnessTripadvisor.filter(destination => destination.location === result.location);
 
-            return [result, tripAdvisorLink];
-        }
-    }
+    let tripAdvisorLink = [cityTrip, mountainTrip, beachTrip, wildnessTrip].flat()[0];
+
+    return [result, tripAdvisorLink];
+
 };
 
 export { filterResult };
